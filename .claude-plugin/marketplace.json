@@ -1,0 +1,22 @@
+{
+  "name": "claude-plugins",
+  "description": "A collection of plugins for Claude Code",
+  "owner": {
+    "name": "knight42"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "mygit",
+      "description": "Smart git workflow: grouped conventional commits, PR creation, and branch sync",
+      "version": "0.1.0",
+      "source": "./plugins/mygit",
+      "category": "development",
+      "repository": "https://github.com/knight42/claude-plugins",
+      "keywords": ["git", "commit", "pr", "workflow"]
+    }
+  ]
+}
