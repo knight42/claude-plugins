@@ -1,0 +1,5 @@
+{
+  "name": "mygit",
+  "version": "0.1.0",
+  "description": "Smart git workflow: grouped conventional commits, PR creation, and branch sync"
+}
