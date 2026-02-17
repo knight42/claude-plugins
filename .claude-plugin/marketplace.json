@@ -11,8 +11,8 @@
   "plugins": [
     {
       "name": "mygit",
-      "description": "Smart git workflow: grouped conventional commits, PR creation, and branch sync",
-      "version": "0.1.0",
+      "description": "Smart git workflow: grouped conventional commits, push, PR creation, and branch sync",
+      "version": "0.2.0",
       "source": "./plugins/mygit",
       "category": "development",
       "repository": "https://github.com/knight42/claude-plugins",
