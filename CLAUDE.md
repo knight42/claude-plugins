@@ -36,6 +36,8 @@ When modifying a plugin (adding/removing components, changing metadata), always 
 - `.claude-plugin/marketplace.json` (root-level collection registry)
 - `plugins/<plugin-name>/.claude-plugin/plugin.json` (per-plugin metadata)
 
+Bump the `version` field in both files after making changes to a plugin.
+
 ## Conventions
 
 - Commits use conventional commit format: `<type>(<optional scope>): <description>`
