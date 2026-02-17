@@ -30,13 +30,13 @@ Not all directories are required — each plugin only includes what it needs. `c
 
 **Skills** (`skills/<name>/SKILL.md`): Model-invoked capabilities with frontmatter (`name`, `description`) — Claude uses them automatically based on task context.
 
-## Important: Updating Plugins
+## CRITICAL: Version Bumping
 
-When modifying a plugin (adding/removing components, changing metadata), always update **both**:
-- `.claude-plugin/marketplace.json` (root-level collection registry)
-- `plugins/<plugin-name>/.claude-plugin/plugin.json` (per-plugin metadata)
+After ANY change to a plugin's content (commands, skills, agents, hooks, configs), you MUST:
+1. Bump `version` in `plugins/<plugin-name>/.claude-plugin/plugin.json`
+2. Bump `version` in `.claude-plugin/marketplace.json`
 
-Bump the `version` field in both files after making changes to a plugin.
+Do NOT consider a plugin change complete until both versions are bumped.
 
 ## Conventions
 
