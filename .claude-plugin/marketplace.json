@@ -12,7 +12,7 @@
     {
       "name": "mygit",
       "description": "Smart git workflow: grouped conventional commits, push, PR creation, and branch sync",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "source": "./plugins/mygit",
       "category": "development",
       "repository": "https://github.com/knight42/claude-plugins",
