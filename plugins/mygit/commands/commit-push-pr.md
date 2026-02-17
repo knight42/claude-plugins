@@ -59,9 +59,6 @@ Create a pull request using `gh pr create`. The PR title should be concise (unde
 gh pr create --title "<title>" --body "$(cat <<'EOF'
 ## Summary
 <1-3 bullet points summarizing the changes>
-
-## Commits
-<list each commit message>
 EOF
 )"
 ```
