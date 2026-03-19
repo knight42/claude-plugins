@@ -1,24 +1,27 @@
 # mygit
 
-A Claude Code plugin for smart git workflows: grouped conventional commits, PR creation, and branch sync.
+A Claude Code plugin for smart git workflows: grouped conventional commits, PR creation, branch sync, and autonomous PR babysitting.
 
-## Commands
+## Skills
 
-### `/mygit:commit`
+### git-workflow
 
-Analyzes all staged and unstaged changes, groups related changes into separate commits, and uses [conventional commit](https://www.conventionalcommits.org/) format (`feat:`, `fix:`, `docs:`, etc.).
+Unified skill with 4 modes — Claude picks the right one based on your intent:
 
-### `/mygit:commit-push`
+- **commit**: Analyzes changes, groups related changes into separate [conventional commits](https://www.conventionalcommits.org/)
+- **commit-push**: Smart grouped commits + push to remote
+- **commit-push-pr**: Full workflow — commits, push, and PR creation via `gh`. Auto-creates a feature branch if on main
+- **sync**: Switches to main, pulls latest, prunes stale branches, cleans up merged local branches
 
-Smart grouped commits on the current branch and push to remote.
+### babysit-pr
 
-### `/mygit:commit-push-pr`
+Autonomous PR maintenance loop. Monitors a pull request and keeps it healthy:
 
-Full workflow: smart grouped commits, push to remote, and create a pull request via `gh`. Auto-creates a feature branch if on main.
+- Fixes failed CI checks (tests, lint, type errors, build failures) by reading logs, diagnosing, and pushing fixes
+- Rebases to resolve merge conflicts
+- Enables auto-merge (`--squash`) when the PR is ready
 
-### `/mygit:sync`
-
-Switches to main, pulls latest from remote, prunes stale remote tracking branches, and deletes local branches whose remotes have been merged/deleted. Handles worktree cleanup.
+Designed for use with `/loop` for continuous monitoring. Each invocation is one check-and-fix pass.
 
 ## Installation
 
@@ -29,4 +32,4 @@ claude --plugin-dir /path/to/this/repo
 ## Prerequisites
 
 - Git
-- [GitHub CLI](https://cli.github.com/) (`gh`) - for `/mygit:commit-push-pr` only
+- [GitHub CLI](https://cli.github.com/) (`gh`) — required for PR-related workflows
